@@ -45,15 +45,15 @@ const NavbarWrapper = styled.div`
   ${media[LESS_THAN_TABLET](hideNavbar)};
 `;
 
-const Wrapper = styled.div`
-  display: flex;
-`;
-
 const NavbarPlaceHolder = styled.div`
   width: ${navbarWidth};
   height: 100vh;
   ${transition}
   ${media[LESS_THAN_TABLET](hideNavbarPlaceHolder)};
+`;
+
+const Wrapper = styled.div`
+  display: flex;
 `;
 
 const BodyWrapper = styled.div`

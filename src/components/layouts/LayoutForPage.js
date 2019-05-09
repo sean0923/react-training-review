@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import media, { LESS_THAN_TABLET } from '../../styled-component-helpers/media';
+import media, { LESS_THAN_PHONE } from '../../styled-component-helpers/media';
 
 const LayoutForPage = ({
   title = 'Default Title',
@@ -40,7 +40,7 @@ const GridWrapper = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-gap: 2rem;
 
-  ${media[LESS_THAN_TABLET](css`
+  ${media[LESS_THAN_PHONE](css`
     display: grid;
     grid-template-columns: 1fr;
   `)};
