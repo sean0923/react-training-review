@@ -19,7 +19,7 @@ const Navbar = () => {
         <SvgReactTraining style={{ marginBottom: '1rem' }} />
 
         <div>
-          {[routeKeys.HOME, routeKeys.PAGE_1].map((routeKey) => {
+          {[routeKeys.HOME, routeKeys.PAGE_1, routeKeys.LEGO_PAGE].map((routeKey) => {
             const link = links[routeKey];
             const text = texts[routeKey];
 

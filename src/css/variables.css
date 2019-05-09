@@ -1,6 +1,8 @@
 :root {
   --color-font: #333;
 
+  --color-black: #333;
+
   --color-transparent-dark-1: rgba(51, 51, 51, 0.1);
   --color-transparent-dark-2: rgba(51, 51, 51, 0.2);
   --color-transparent-dark-3: rgba(51, 51, 51, 0.3);
