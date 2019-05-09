@@ -1,15 +1,13 @@
 import { css } from 'styled-components';
 
-export const mediaKeys = {
-  DESKTOP: 'DESKTOP',
-  TABLET: 'TABLET',
-  PHONE: 'PHONE',
-};
+export const LESS_THAN_DESKTOP = 'LESS_THAN_DESKTOP';
+export const LESS_THAN_TABLET = 'LESS_THAN_TABLET';
+export const LESS_THAN_PHONE = 'LESS_THAN_PHONE';
 
-export const sizes = {
-  [mediaKeys.DESKTOP]: 992,
-  [mediaKeys.TABLET]: 768,
-  [mediaKeys.PHONE]: 576,
+const sizes = {
+  [LESS_THAN_DESKTOP]: 992,
+  [LESS_THAN_TABLET]: 768,
+  [LESS_THAN_PHONE]: 576,
 };
 
 // Iterate through the sizes and create a media template

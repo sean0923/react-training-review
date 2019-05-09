@@ -25,5 +25,6 @@ module.exports = {
     'import/prefer-default-export': 0,
     'arrow-parens': 0,
     'no-console': 0,
+    'import/no-named-as-default-member': 0,
   },
 };

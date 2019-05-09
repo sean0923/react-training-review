@@ -1,17 +1,20 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import media, { mediaKeys } from '../../styled-component-helpers/media';
+import media, { LESS_THAN_TABLET } from '../../styled-component-helpers/media';
 
 const LayoutForPage = ({
   title = 'Default Title',
   description = 'default description',
   children,
 }) => {
+  const myCodeComponent = children[0];
+  const solutionCodeComponent = children[1];
+
   return (
     <div>
       <Title>{title}</Title>
       <Description>{description}</Description>
-      <GridWrapper>{[children[0], children[1]]}</GridWrapper>
+      <GridWrapper>{[myCodeComponent, solutionCodeComponent]}</GridWrapper>
     </div>
   );
 };
@@ -32,17 +35,15 @@ const Description = styled.p`
   margin-bottom: 4rem;
 `;
 
-const smallerThanTablet = css`
-  display: grid;
-  grid-template-columns: 1fr;
-`;
-
 const GridWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 2rem;
 
-  ${media[mediaKeys.TABLET](smallerThanTablet)}
+  ${media[LESS_THAN_TABLET](css`
+    display: grid;
+    grid-template-columns: 1fr;
+  `)};
 
   & > div {
     border: 1px solid var(--color-black);
