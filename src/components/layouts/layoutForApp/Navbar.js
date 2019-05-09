@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <Wrapper>
       <div>
-        <SvgReactTraining style={{ marginBottom: 20 }} />
+        <SvgReactTraining style={{ marginBottom: '1rem' }} />
 
         <div>
           <NavItem text="Home" to="/" />
