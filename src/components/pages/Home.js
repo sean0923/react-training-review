@@ -1,12 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-
-import './css/index.css';
-import './css/variables.css';
 
 // -----------------------------------------------------------------------------------------
 // ----------------------------------- Component Import ------------------------------------
 // -----------------------------------------------------------------------------------------
-import App from './App';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const Home = () => {
+  return (
+    <div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+    </div>
+  );
+};
+
+export default Home;
