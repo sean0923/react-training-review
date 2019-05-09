@@ -1,5 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+
 import { routeKeys, components, links, titles, descriptions } from '../data/dataForRoutes';
 
 const SwithAndRoutesForApp = () => {

@@ -19,6 +19,7 @@ module.exports = {
   rules: {
     //
     'react/prop-types': 0,
+    'object-curly-newline': 0,
     //
     'react/jsx-filename-extension': 0,
     'arrow-body-style': 0,
