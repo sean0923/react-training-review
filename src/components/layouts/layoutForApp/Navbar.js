@@ -7,6 +7,11 @@ import styled from 'styled-components';
 import SvgReactTraining from '../../common/SvgReactTraining';
 import NavItem from './navbar/NavItem';
 
+// -----------------------------------------------------------------------------------------
+// ----------------------------------------- Data ------------------------------------------
+// -----------------------------------------------------------------------------------------
+import { routeKeys, texts, links } from '../../../data/dataForRoutes';
+
 const Navbar = () => {
   return (
     <Wrapper>
@@ -14,8 +19,12 @@ const Navbar = () => {
         <SvgReactTraining style={{ marginBottom: '1rem' }} />
 
         <div>
-          <NavItem text="Home" to="/" />
-          <NavItem text="Page 1" to="/page-1/" />
+          {[routeKeys.HOME, routeKeys.PAGE_1].map((routeKey) => {
+            const link = links[routeKey];
+            const text = texts[routeKey];
+
+            return <NavItem to={link} text={text} key={link} />;
+          })}
         </div>
       </div>
     </Wrapper>
