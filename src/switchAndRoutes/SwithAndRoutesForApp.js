@@ -10,12 +10,13 @@ const SwithAndRoutesForApp = () => {
         const link = links[routeKey];
         const title = titles[routeKey];
         const description = descriptions[routeKey];
+        const Component = components[routeKey];
 
         return (
           <Route
             exact={link === '/'}
             path={link}
-            render={(props) => components[routeKey]({ ...props, title, description })}
+            render={(props) => <Component {...props} title={title} description={description} />}
             key={link}
           />
         );

@@ -5,6 +5,7 @@ import media, { LESS_THAN_TABLET } from '../../styled-component-helpers/media';
 // -----------------------------------------------------------------------------------------
 // ----------------------------------- Component Import ------------------------------------
 // -----------------------------------------------------------------------------------------
+
 import Navbar from './layoutForApp/Navbar';
 
 const LayoutForApp = ({ children }) => {
