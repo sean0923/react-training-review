@@ -10,13 +10,20 @@ const Page1 = () => {
   const randomProps = useInput({ value: '', label: 'label', errFuncs: [isRequired] });
 
   return (
-    <div>
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        inputProps.onBlur();
+        randomProps.onBlur();
+      }}
+    >
       <Input {...inputProps} />
       <Input {...randomProps} />
       <div>Page1</div>
       <div>Page1</div>
       <div>Page1</div>
-    </div>
+      <button>submit</button>
+    </form>
   );
 };
 
