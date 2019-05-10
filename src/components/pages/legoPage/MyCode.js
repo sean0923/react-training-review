@@ -8,9 +8,9 @@ import Lego from './Lego';
 const MyCode = () => {
   return (
     <div>
-      <Lego />
-      <Lego color="green" />
-      <Lego color="blue" />
+      {/*  */}
+      {/* My Code Should Goes Here */}
+      {/*  */}
     </div>
   );
 };
