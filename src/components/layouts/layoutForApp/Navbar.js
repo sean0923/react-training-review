@@ -16,7 +16,8 @@ const Navbar = () => {
   return (
     <Wrapper>
       <div>
-        <SvgReactTraining style={{ marginBottom: '1rem' }} />
+        {/* <SvgReactTraining style={{ marginBottom: '1rem' }} /> */}
+        <LogoPlaceholder>Logo Placeholder</LogoPlaceholder>
 
         <div>
           {[routeKeys.HOME, routeKeys.PAGE_1, routeKeys.LEGO_PAGE].map((routeKey) => {
@@ -40,4 +41,8 @@ const Wrapper = styled.div`
   background-color: var(--color-transparent-dark-1);
   height: 100vh;
   padding: 1rem;
+`;
+
+const LogoPlaceholder = styled.h1`
+  margin-bottom: 2rem;
 `;
