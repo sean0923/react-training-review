@@ -37,7 +37,7 @@ const Title = styled.h1`
 
 const Description = styled.p`
   font-size: 1.5rem;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 `;
 
 const SubTitle = styled.h2`

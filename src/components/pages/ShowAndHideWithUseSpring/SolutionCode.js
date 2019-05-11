@@ -4,15 +4,18 @@ import { animated, useSpring } from 'react-spring';
 const SolutionCode = () => {
   const [isToggle, setIsToggle] = useState(false);
 
-  const fadeWhenRefresh = useSpring({ from: { opacity: 0 }, to: { opacity: 1 } });
-  const fadeWhenToggle = useSpring(isToggle ? { opacity: 0 } : { opacity: 1 });
-  const fadeShort = useSpring({ opacity: isToggle ? 0 : 1 });
+  const visible = { opacity: 1 };
+  const hidden = { opacity: 0 };
+
+  const fadeWhenRefresh = useSpring({ from: hidden, to: visible });
+  const hideToVisible = useSpring(isToggle ? visible : hidden);
+  const visibleToHide = useSpring(isToggle ? hidden : visible);
 
   return (
     <div>
-      <animated.div style={fadeWhenRefresh}>fadeWhenRefresh</animated.div>
-      <animated.div style={fadeWhenToggle}>fadeWhenToggle</animated.div>
-      <animated.div style={fadeShort}>fadeWhenToggle</animated.div>
+      <animated.h1 style={fadeWhenRefresh}>fadeWhenRefresh</animated.h1>
+      <animated.h1 style={hideToVisible}>hideToVisible</animated.h1>
+      <animated.h1 style={visibleToHide}>visibleToHide</animated.h1>
 
       <button onClick={() => setIsToggle(!isToggle)}>toggle</button>
     </div>
