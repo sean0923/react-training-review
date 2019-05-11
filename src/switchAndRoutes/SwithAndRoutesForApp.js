@@ -1,17 +1,12 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import { routeKeys, components, links, titles, descriptions } from '../data/dataForRoutes';
+import dataForRoutes from '../data/dataForRoutes';
 
 const SwithAndRoutesForApp = () => {
   return (
     <Switch>
-      {[routeKeys.HOME, routeKeys.PAGE_1, routeKeys.LEGO_PAGE].map((routeKey) => {
-        const link = links[routeKey];
-        const title = titles[routeKey];
-        const description = descriptions[routeKey];
-        const Component = components[routeKey];
-
+      {dataForRoutes.map(({ Component, link, title, description }) => {
         return (
           <Route
             exact={link === '/'}

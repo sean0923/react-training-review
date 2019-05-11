@@ -1,42 +1,31 @@
 // -----------------------------------------------------------------------------------------
 // ----------------------------------- Component Import ------------------------------------
 // -----------------------------------------------------------------------------------------
-import Home from '../components/pages/Home';
-import Page1 from '../components/pages/Page1';
-import LegoPage from '../components/pages/LegoPage';
+import Home from '../components/pages/Home/Home';
+
+import BasicToggle from '../components/pages/BasicToggle/BasicToggle';
 
 export const routeKeys = {
   HOME: 'HOME',
-  PAGE_1: 'PAGE_1',
-  LEGO_PAGE: 'LEGO_PAGE',
+  BasicToggle: 'BasicToggle',
 };
 
 export const components = {
   [routeKeys.HOME]: Home,
-  [routeKeys.PAGE_1]: Page1,
-  [routeKeys.LEGO_PAGE]: LegoPage,
+  [routeKeys.BasicToggle]: BasicToggle,
 };
 
-export const links = {
-  [routeKeys.HOME]: '/',
-  [routeKeys.PAGE_1]: '/page-1/',
-  [routeKeys.LEGO_PAGE]: '/lego/',
+const getLink = (routeKey) => {
+  return routeKey === routeKeys.HOME ? '/' : `/${routeKey}/`;
 };
 
-export const texts = {
-  [routeKeys.HOME]: 'Home',
-  [routeKeys.PAGE_1]: 'Page 1',
-  [routeKeys.LEGO_PAGE]: 'Lego',
-};
-
-export const titles = {
-  [routeKeys.HOME]: 'Home',
-  [routeKeys.PAGE_1]: 'Page 1',
-  [routeKeys.LEGO_PAGE]: 'Lego',
-};
-
-export const descriptions = {
-  [routeKeys.HOME]: 'Home',
-  [routeKeys.PAGE_1]: 'Page 1',
-  [routeKeys.LEGO_PAGE]: 'Components are like Lego blocks',
-};
+export default Object.keys(routeKeys).map((routeKey) => {
+  return {
+    routeKey,
+    Component: components[routeKey],
+    link: getLink(routeKey),
+    text: routeKey,
+    title: routeKey,
+    description: routeKey,
+  };
+});

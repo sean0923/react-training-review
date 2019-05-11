@@ -3,17 +3,17 @@ import React from 'react';
 // -----------------------------------------------------------------------------------------
 // ----------------------------------- Component Import ------------------------------------
 // -----------------------------------------------------------------------------------------
-import LayoutForPage from '../layouts/LayoutForPage';
+import PageLayout from '../../layouts/PageLayout';
 
-import MyCode from './legoPage/MyCode';
-import SolutionCode from './legoPage/SolutionCode';
+import MyCode from './MyCode';
+import SolutionCode from './SolutionCode';
 
 const LegoPage = ({ title, description }) => {
   return (
-    <LayoutForPage title={title} description={description}>
+    <PageLayout title={title} description={description}>
       <MyCode />
       <SolutionCode />
-    </LayoutForPage>
+    </PageLayout>
   );
 };
 

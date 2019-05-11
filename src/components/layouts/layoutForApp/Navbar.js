@@ -4,26 +4,29 @@ import styled from 'styled-components';
 // -----------------------------------------------------------------------------------------
 // ----------------------------------- Component Import ------------------------------------
 // -----------------------------------------------------------------------------------------
-import SvgReactTraining from '../../common/SvgReactTraining';
+import SvgReactSpring from '../../common/SvgReactSpring';
 import NavItem from './navbar/NavItem';
+
+// -----------------------------------------------------------------------------------------
+// --------------------------------------- Helper ------------------------------------------
+// -----------------------------------------------------------------------------------------
+import * as sc from '../../../styled-component-helpers/sc';
 
 // -----------------------------------------------------------------------------------------
 // ----------------------------------------- Data ------------------------------------------
 // -----------------------------------------------------------------------------------------
-import { routeKeys, texts, links } from '../../../data/dataForRoutes';
+import dataForRoutes from '../../../data/dataForRoutes';
 
 const Navbar = () => {
   return (
     <Wrapper>
       <div>
-        {/* <SvgReactTraining style={{ marginBottom: '1rem' }} /> */}
-        <LogoPlaceholder>Logo Placeholder</LogoPlaceholder>
+        <LogoWrapper>
+          <SvgReactSpring />
+        </LogoWrapper>
 
         <div>
-          {[routeKeys.HOME, routeKeys.PAGE_1, routeKeys.LEGO_PAGE].map((routeKey) => {
-            const link = links[routeKey];
-            const text = texts[routeKey];
-
+          {dataForRoutes.map(({ link, text }) => {
             return <NavItem to={link} text={text} key={link} />;
           })}
         </div>
@@ -43,6 +46,8 @@ const Wrapper = styled.div`
   padding: 1rem;
 `;
 
-const LogoPlaceholder = styled.h1`
+const LogoWrapper = styled.div`
+  ${sc.flexCenter()}
+  margin-top: 1rem;
   margin-bottom: 2rem;
 `;

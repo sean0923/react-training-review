@@ -3,16 +3,18 @@ import React from 'react';
 // -----------------------------------------------------------------------------------------
 // ----------------------------------- Component Import ------------------------------------
 // -----------------------------------------------------------------------------------------
-import Lego from './Lego';
+import PageLayout from '../../layouts/PageLayout';
 
-const MyCode = () => {
+import MyCode from './MyCode';
+import SolutionCode from './SolutionCode';
+
+const LegoPage = ({ title, description }) => {
   return (
-    <div>
-      {/*  */}
-      {/* My Code Should Goes Here */}
-      {/*  */}
-    </div>
+    <PageLayout title={title} description={description}>
+      <MyCode />
+      <SolutionCode />
+    </PageLayout>
   );
 };
 
-export default MyCode;
+export default LegoPage;
