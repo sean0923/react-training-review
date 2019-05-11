@@ -2,11 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import media, { LESS_THAN_PHONE } from '../../styled-component-helpers/media';
 
-const LayoutForPage = ({
-  title = 'Default Title',
-  description = 'default description',
-  children,
-}) => {
+const PageLayout = ({ title = 'Default Title', description = 'default description', children }) => {
   const myCodeComponent = children[0];
   const solutionCodeComponent = children[1];
 
@@ -14,12 +10,21 @@ const LayoutForPage = ({
     <div>
       <Title>{title}</Title>
       <Description>{description}</Description>
-      <GridWrapper>{[myCodeComponent, solutionCodeComponent]}</GridWrapper>
+      <GridWrapper>
+        <div>
+          <SubTitle>My Code</SubTitle>
+          {myCodeComponent}
+        </div>
+        <div>
+          <SubTitle>Solution Code</SubTitle>
+          {solutionCodeComponent}
+        </div>
+      </GridWrapper>
     </div>
   );
 };
 
-export default LayoutForPage;
+export default PageLayout;
 
 // -----------------------------------------------------------------------------------------
 // ---------------------------------- Styled Components ------------------------------------
@@ -35,6 +40,11 @@ const Description = styled.p`
   margin-bottom: 4rem;
 `;
 
+const SubTitle = styled.h2`
+  text-decoration: underline;
+  margin-bottom: 2rem;
+`;
+
 const GridWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -48,5 +58,6 @@ const GridWrapper = styled.div`
   & > div {
     border: 1px solid var(--color-black);
     min-height: 40rem;
+    padding: 2rem;
   }
 `;

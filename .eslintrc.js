@@ -19,6 +19,7 @@ module.exports = {
   rules: {
     //
     'react/prop-types': 0,
+    'react/button-has-type': 0,
     'object-curly-newline': 0,
     'no-use-before-define': 0,
     indent: 0,
