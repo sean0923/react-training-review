@@ -8,7 +8,7 @@ import PageLayout from '../../layouts/PageLayout';
 import MyCode from './MyCode';
 import SolutionCode from './SolutionCode';
 
-const LegoPage = ({ title, description }) => {
+const ShowAndHideWithUseSpring = ({ title, description }) => {
   return (
     <PageLayout title={title} description={description}>
       <MyCode />
@@ -17,4 +17,5 @@ const LegoPage = ({ title, description }) => {
   );
 };
 
-export default LegoPage;
+
+export default ShowAndHideWithUseSpring;

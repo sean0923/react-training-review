@@ -3,16 +3,16 @@
 // -----------------------------------------------------------------------------------------
 import Home from '../components/pages/Home/Home';
 
-import BasicToggle from '../components/pages/BasicToggle/BasicToggle';
+import ShowAndHideWithUseSpring from '../components/pages/ShowAndHideWithUseSpring/ShowAndHideWithUseSpring';
 
 export const routeKeys = {
   HOME: 'HOME',
-  BasicToggle: 'BasicToggle',
+  ShowAndHideWithUseSpring: 'ShowAndHideWithUseSpring',
 };
 
 export const components = {
   [routeKeys.HOME]: Home,
-  [routeKeys.BasicToggle]: BasicToggle,
+  [routeKeys.ShowAndHideWithUseSpring]: ShowAndHideWithUseSpring,
 };
 
 const getLink = (routeKey) => {

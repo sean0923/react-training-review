@@ -14,6 +14,8 @@ const StyledLink = styled(Link)`
   margin: 0 0.5rem;
   display: block;
   text-decoration: none;
+  word-wrap: break-word;
+
 
   color: inherit;
   font-weight: bold;
