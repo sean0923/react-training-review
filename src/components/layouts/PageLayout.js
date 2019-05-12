@@ -56,7 +56,8 @@ const GridWrapper = styled.div`
   `)};
 
   & > div {
-    border: 1px solid var(--color-black);
+    /* border: 1px solid var(--color-black); */
+    box-shadow: var(--box-shadow);
     min-height: 40rem;
     padding: 2rem;
   }

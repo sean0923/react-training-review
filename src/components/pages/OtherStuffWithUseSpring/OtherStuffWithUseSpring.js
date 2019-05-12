@@ -5,16 +5,16 @@ import React from 'react';
 // -----------------------------------------------------------------------------------------
 import PageLayout from '../../layouts/PageLayout';
 
-import __MyCode from './__MyCode';
-import __SolutionCode from './__SolutionCode';
+import MyCode from './MyCode';
+import SolutionCode from './SolutionCode';
 
-const LegoPage = ({ title, description }) => {
+const OtherStuffWithUseSpring = ({ title, description }) => {
   return (
     <PageLayout title={title} description={description}>
-      <__MyCode />
-      <__SolutionCode />
+      <MyCode />
+      <SolutionCode />
     </PageLayout>
   );
 };
 
-export default LegoPage;
+export default OtherStuffWithUseSpring;
