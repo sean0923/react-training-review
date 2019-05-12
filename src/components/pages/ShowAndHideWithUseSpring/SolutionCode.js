@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import { animated, useSpring } from 'react-spring';
 
+// -----------------------------------------------------------------------------------------
+// ----------------------------------- Component Import ------------------------------------
+// -----------------------------------------------------------------------------------------
+import Button from '../../common/Button';
+
 const SolutionCode = () => {
   const [isToggle, setIsToggle] = useState(false);
 
@@ -14,10 +19,13 @@ const SolutionCode = () => {
   return (
     <div>
       <animated.h1 style={fadeWhenRefresh}>fadeWhenRefresh</animated.h1>
+
+      <hr />
+
       <animated.h1 style={hideToVisible}>hideToVisible</animated.h1>
       <animated.h1 style={visibleToHide}>visibleToHide</animated.h1>
 
-      <button onClick={() => setIsToggle(!isToggle)}>toggle</button>
+      <Button onClick={() => setIsToggle(!isToggle)}>toggle</Button>
     </div>
   );
 };
