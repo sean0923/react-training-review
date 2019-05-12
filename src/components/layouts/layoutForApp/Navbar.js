@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import { DiReact } from 'react-icons/di';
 
 // -----------------------------------------------------------------------------------------
 // ----------------------------------- Component Import ------------------------------------
 // -----------------------------------------------------------------------------------------
-import SvgReactSpring from '../../common/SvgReactSpring';
 import NavItem from './navbar/NavItem';
 
 // -----------------------------------------------------------------------------------------
@@ -22,8 +22,8 @@ const Navbar = () => {
     <Wrapper>
       <div>
         <LogoWrapper>
-          <SvgReactSpring style={{ marginRight: '1rem' }} />
-          <LogoText>react-spring</LogoText>
+          <DiReact size="30%" color="var(--color-react)" style={{ marginRight: '.5rem' }} />
+          <LogoText>React Tutorial</LogoText>
         </LogoWrapper>
 
         <div>
