@@ -5,17 +5,16 @@ import React from 'react';
 // -----------------------------------------------------------------------------------------
 import PageLayout from '../../layouts/PageLayout';
 
-import MyCode from './MyCode';
-import SolutionCode from './SolutionCode';
+import __MyCode from './__MyCode';
+import __SolutionCode from './__SolutionCode';
 
 const ShowAndHideWithUseSpring = ({ title, description }) => {
   return (
     <PageLayout title={title} description={description}>
-      <MyCode />
-      <SolutionCode />
+      <__MyCode />
+      <__SolutionCode />
     </PageLayout>
   );
 };
-
 
 export default ShowAndHideWithUseSpring;

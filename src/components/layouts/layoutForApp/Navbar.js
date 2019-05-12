@@ -22,7 +22,8 @@ const Navbar = () => {
     <Wrapper>
       <div>
         <LogoWrapper>
-          <SvgReactSpring />
+          <SvgReactSpring width="25%" style={{ marginRight: '1rem' }} />
+          <LogoText>react-srping</LogoText>
         </LogoWrapper>
 
         <div>
@@ -50,4 +51,10 @@ const LogoWrapper = styled.div`
   ${sc.flexCenter()}
   margin-top: 1rem;
   margin-bottom: 2rem;
+`;
+
+const LogoText = styled.h2`
+  font-size: 1.5rem;
+  line-height: 1;
+  width: 100px;
 `;

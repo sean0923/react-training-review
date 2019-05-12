@@ -1,8 +1,8 @@
 import React from 'react';
 
-const SvgReactSpring = ({ width = '30%' }) => {
+const SvgReactSpring = ({ width = '30%', ...rest }) => {
   return (
-    <svg height="100%" viewBox="0 0 139 139" width={width} style={{ cursor: 'grabbing' }}>
+    <svg height="100%" viewBox="0 0 139 139" width={width} {...rest}>
       <radialGradient
         id="a"
         cx="33.434395%"

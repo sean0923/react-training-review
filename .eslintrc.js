@@ -17,6 +17,8 @@ module.exports = {
   },
   plugins: ['react'],
   rules: {
+    // only for this project
+    'react/jsx-pascal-case': 0,
     //
     'react/prop-types': 0,
     'react/button-has-type': 0,
