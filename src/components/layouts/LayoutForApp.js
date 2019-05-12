@@ -37,9 +37,7 @@ const LayoutForApp = ({ children }) => {
 // -----------------------------------------------------------------------------------------
 const navbarWidth = '220px';
 
-const hideNavbar = `
-  transform: translateX(-100%);
-`;
+const hideNavbar = 'transform: translateX(-100%);';
 
 const hideNavbarPlaceHolder = `
   transform: translateX(-100%);
