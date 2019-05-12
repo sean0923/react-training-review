@@ -12,7 +12,7 @@ export default Lego;
 const Wrapper = styled.div`
   margin: 1rem;
   background-color: ${(props) => props.color && props.color};
-  border: 0.5rem solid black;
+  border: 0.5rem solid var(--color-black);
 
   min-height: 2rem;
 `;
