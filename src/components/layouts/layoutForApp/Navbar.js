@@ -23,7 +23,7 @@ const Navbar = () => {
       <div>
         <LogoWrapper>
           <SvgReactSpring width="25%" style={{ marginRight: '1rem' }} />
-          <LogoText>react-srping</LogoText>
+          <LogoText>react-spring</LogoText>
         </LogoWrapper>
 
         <div>
