@@ -15,6 +15,11 @@ const MyCode = () => {
 
       <h1>font size</h1>
       <Button onClick={() => {}}>toggle font size</Button>
+
+      <hr />
+
+      <h1>text position</h1>
+      <Button onClick={() => {}}>move text</Button>
     </div>
   );
 };
