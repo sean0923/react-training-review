@@ -8,11 +8,16 @@ import PageLayout from '../../layouts/PageLayout';
 import MyCode from './MyCode';
 import SolutionCode from './SolutionCode';
 
+// -----------------------------------------------------------------------------------------
+// ----------------------------------------- Data ------------------------------------------
+// -----------------------------------------------------------------------------------------
+import userOneData from './userOneData.json';
+
 const LegoPage = ({ title, description }) => {
   return (
     <PageLayout title={title} description={description}>
-      <MyCode />
-      <SolutionCode />
+      <MyCode userOneData={userOneData} />
+      <SolutionCode userOneData={userOneData} />
     </PageLayout>
   );
 };
