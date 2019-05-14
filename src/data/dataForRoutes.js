@@ -7,19 +7,34 @@ import LegoPage from '../components/pages/LegoPage/LegoPage';
 import FunctionalComponent from '../components/pages/FunctionalComponent/FunctionalComponent';
 
 export const routeKeys = {
-  HOME: 'HOME',
+  Home: 'Home',
   LegoPage: 'LegoPage',
   FunctionalComponent: 'FunctionalComponent',
 };
 
 export const components = {
-  [routeKeys.HOME]: Home,
+  [routeKeys.Home]: Home,
   [routeKeys.LegoPage]: LegoPage,
   [routeKeys.FunctionalComponent]: FunctionalComponent,
 };
 
 const getLink = (routeKey) => {
-  return routeKey === routeKeys.HOME ? '/' : `/${routeKey}/`;
+  return routeKey === routeKeys.Home ? '/' : `/${routeKey}/`;
+};
+
+const addSpacingBtwCamelCase = (text) => {
+  let outputText = text[0];
+
+  for (let i = 1; i < text.length; i++) {
+    const char = text[i];
+    const isCharUpperCase = char === char.toUpperCase();
+    if (isCharUpperCase) {
+      outputText += ' ';
+    }
+    outputText += char;
+  }
+
+  return outputText;
 };
 
 export default Object.keys(routeKeys).map((routeKey) => {
@@ -27,7 +42,7 @@ export default Object.keys(routeKeys).map((routeKey) => {
     routeKey,
     Component: components[routeKey],
     link: getLink(routeKey),
-    text: routeKey,
+    text: addSpacingBtwCamelCase(routeKey),
     title: routeKey,
     description: routeKey,
   };
