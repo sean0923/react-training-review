@@ -43,7 +43,7 @@ export default Object.keys(routeKeys).map((routeKey) => {
     Component: components[routeKey],
     link: getLink(routeKey),
     text: addSpacingBtwCamelCase(routeKey),
-    title: routeKey,
-    description: routeKey,
+    title: addSpacingBtwCamelCase(routeKey),
+    description: addSpacingBtwCamelCase(routeKey),
   };
 });
