@@ -3,12 +3,14 @@
 // -----------------------------------------------------------------------------------------
 import Home from '../components/pages/Home/Home';
 
+import HellowWorld from '../components/pages/HelloWorld/HelloWorld';
 import LegoPage from '../components/pages/LegoPage/LegoPage';
 import FunctionalComponent from '../components/pages/FunctionalComponent/FunctionalComponent';
 import ClassComponent from '../components/pages/ClassComponent/ClassComponent';
 
 export const routeKeys = {
   Home: 'Home',
+  HellowWorld: 'HellowWorld',
   LegoPage: 'LegoPage',
   FunctionalComponent: 'FunctionalComponent',
   ClassComponent: 'ClassComponent',
@@ -16,6 +18,7 @@ export const routeKeys = {
 
 export const components = {
   [routeKeys.Home]: Home,
+  [routeKeys.HellowWorld]: HellowWorld,
   [routeKeys.LegoPage]: LegoPage,
   [routeKeys.FunctionalComponent]: FunctionalComponent,
   [routeKeys.ClassComponent]: ClassComponent,

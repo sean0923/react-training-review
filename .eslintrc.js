@@ -28,6 +28,7 @@ module.exports = {
     indent: 0,
     //
 
+    'react/jsx-one-expression-per-line': 0,
     'jsx-a11y/label-has-for': 0,
     'no-plusplus': 0,
     'react/jsx-filename-extension': 0,
