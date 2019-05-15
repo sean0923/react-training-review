@@ -1,5 +1,7 @@
 import React from 'react';
 
+import userOneData from './userOneData.json';
+
 const GeneralInfo = ({ name, username, email, phone, website }) => {
   return (
     <div>
@@ -36,8 +38,8 @@ const Address = ({ address }) => {
   );
 };
 
-const SolutionCode = (props) => {
-  const { name, username, email, address, phone, website } = props.userOneData;
+const SolutionCode = () => {
+  const { name, username, email, address, phone, website } = userOneData;
 
   return (
     <div>

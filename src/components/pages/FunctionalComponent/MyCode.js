@@ -1,6 +1,8 @@
 import React from 'react';
 
-const MyCode = (props) => {
+// import userOneData from './userOneData.json';
+
+const MyCode = () => {
   return (
     <div>
       <h2>User Info</h2>
